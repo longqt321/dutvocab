@@ -29,7 +29,7 @@ if cards:
     }
 
     # Hiển thị bảng
-    event = st.dataframe(df, use_container_width=True,
+    event = st.dataframe(df, width="stretch",
                          column_config=column_config,
                          hide_index=False,
                          on_select="rerun",
@@ -41,7 +41,7 @@ if cards:
         count = len(selected_rows)
         st.warning(f"Bạn đang chọn {count} từ để xóa.")
         
-        if st.button(f"🗑️ Xóa {count} từ", type="primary", use_container_width=True):
+        if st.button(f"🗑️ Xóa {count} từ", type="primary", width="stretch"):
             
             # --- CÚ PHÁP POLARS ---
             # Lấy cột "id" tại các dòng được chọn (selected_rows)

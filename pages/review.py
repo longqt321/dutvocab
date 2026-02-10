@@ -52,9 +52,9 @@ else:
                 st.session_state.show_answer = False
                 st.rerun()
 
-            with c1: st.button("😭 Quên hẳn (0đ)", on_click=process_review, args=(5,), use_container_width=True)
-            with c2: st.button("🤔 Hơi nhớ (3đ)", on_click=process_review, args=(3,), use_container_width=True)
-            with c3: st.button("😎 Quá dễ (5đ)", on_click=process_review, args=(0,), use_container_width=True)
+            with c1: st.button("😭 Quên hẳn (0đ)", on_click=process_review, args=(5,), width="stretch")
+            with c2: st.button("🤔 Hơi nhớ (3đ)", on_click=process_review, args=(3,), width="stretch")
+            with c3: st.button("😎 Quá dễ (5đ)", on_click=process_review, args=(0,), width="stretch")
             
         else:
-            st.button("Xem đáp án", on_click=lambda: st.session_state.update(show_answer=True), use_container_width=True)
+            st.button("Xem đáp án", on_click=lambda: st.session_state.update(show_answer=True), width="stretch")
