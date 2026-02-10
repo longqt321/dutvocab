@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "polars>=1.38.1",
+    "sqlmodel>=0.0.32",
     "streamlit>=1.54.0",
 ]
